@@ -73,11 +73,15 @@
 }
 
 .title {
-	font: var(--display-xl-semibold);
-	letter-spacing: -0.02em;
-	color: var(--gray-900);
+	color: var(--Gray-950, var(--colors-gray-light-mode-950, #0C111D));
+	text-align: center;
+	font-family: Inter;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 60px;
+	letter-spacing: -0.96px;
 	max-width: 720px;
-	line-height: 1.2;
 	margin: 0;
 }
 

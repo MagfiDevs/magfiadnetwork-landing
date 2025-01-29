@@ -3,27 +3,28 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: var(--spacing-10xl) var(--spacing-xl);
 	overflow: hidden;
 }
 
 .container {
 	width: 100%;
-	max-width: 1280px;
+	max-width: 720px;
 	margin: 0 auto;
-	padding: 0 2rem;
 	position: relative;
 	z-index: 10;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: var(--spacing-9xl);
 }
 
 .toggleWrapper {
 	position: relative;
-	margin-bottom: 4rem;
-	padding: var(--spacing-xs);
-	gap: var(--spacing-md);
-	border-radius: var(--radius-full);
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: var(--spacing-xl);
 }
 
 .toggleContainer {
@@ -32,20 +33,20 @@
 	border-radius: var(--radius-full);
 	position: relative;
 	box-shadow: var(--shadow-md);
-	padding: var(--spacing-xs);
+	padding: var(--spacing-sm);
 }
 
 .toggleButton {
-	padding: var(--spacing-xl) var(--spacing-4xl);
-	gap: 10px;
+	padding: var(--spacing-xl) var(--spacing-5xl);
 	border-radius: var(--radius-full);
 	position: relative;
-	font-size: 14px;
-	font-weight: 500;
+	font: var(--text-md-medium);
 	white-space: nowrap;
 	border: none;
 	background: none;
 	cursor: pointer;
+	min-width: 180px;
+	transition: all 0.2s ease;
 }
 
 .toggleButtonActive {
@@ -59,36 +60,38 @@
 }
 
 .toggleButtonInactive:hover {
-	background-color: var(--gray-100);
 	color: var(--gray-700);
 }
 
 .content {
-	max-width: 960px;
-	margin: 0 auto;
+	width: 100%;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: var(--spacing-5xl);
+	gap: var(--spacing-6xl);
 }
 
 .title {
-	font: var(--display-lg-semibold);
+	font: var(--display-xl-semibold);
 	letter-spacing: -0.02em;
 	color: var(--gray-900);
-	margin-top: var(--spacing-lg);
+	max-width: 720px;
+	line-height: 1.2;
+	margin: 0;
 }
 
 .titleWrapper {
 	display: inline-flex;
 	align-items: center;
+	gap: var(--spacing-sm);
 }
 
 .telegramLogo {
-	height: 48px;
-	width: 48px;
+	height: 52px;
+	width: 52px;
 	object-fit: contain;
+	margin-top: -4px;
 }
 
 .gradientText {
@@ -97,29 +100,33 @@
 	background-clip: text;
 	color: transparent;
 	display: inline-block;
+	margin: 0 var(--spacing-xs);
 }
 
 .description {
-	font: var(--text-md-regular);
+	font: var(--text-lg-regular);
 	color: var(--gray-600);
-	max-width: 450px;
-	padding: 0 var(--spacing-xl);
-	margin: 0;
+	max-width: 540px;
+	margin: var(--spacing-md) 0 var(--spacing-xl);
+	line-height: 1.6;
 }
 
 .button {
-	padding: var(--spacing-lg) var(--spacing-2xl);
+	padding: var(--spacing-xl) var(--spacing-5xl);
 	border-radius: var(--radius-full);
 	background: var(--brand-600);
 	border: none;
 	color: var(--gray-25);
 	font: var(--text-md-semibold);
 	cursor: pointer;
+	min-width: 200px;
+	transition: all 0.2s ease;
 }
 
 .button:hover {
 	background-color: var(--brand-700);
 	box-shadow: var(--shadow-xl);
+	transform: translateY(-1px);
 }
 
 .dynamicLine {
@@ -163,7 +170,30 @@
 
 @media (max-width: 1024px) {
 	.section {
-		padding: var(--spacing-8xl) 0;
+		padding: var(--spacing-8xl) var(--spacing-xl);
+	}
+
+	.title {
+		font: var(--display-lg-semibold);
+	}
+
+	.telegramLogo {
+		width: 48px;
+		height: 48px;
+	}
+}
+
+@media (max-width: 768px) {
+	.section {
+		padding: var(--spacing-7xl) var(--spacing-xl);
+	}
+
+	.container {
+		gap: var(--spacing-6xl);
+	}
+
+	.toggleButton {
+		padding: var(--spacing-md) var(--spacing-xl);
 	}
 
 	.title {
@@ -174,36 +204,14 @@
 		width: 44px;
 		height: 44px;
 	}
-}
-
-@media (max-width: 768px) {
-	.section {
-		padding: var(--spacing-7xl) 0;
-	}
-
-	.toggleButton {
-		padding: var(--spacing-lg) var(--spacing-xl);
-		font: var(--text-sm-medium);
-	}
-
-	.title {
-		font: var(--display-sm-regular);
-	}
-
-	.telegramLogo {
-		width: 40px;
-		height: 40px;
-	}
 
 	.description {
 		font: var(--text-md-regular);
-		padding: 0 var(--spacing-xl);
 		max-width: 100%;
+		padding: 0 var(--spacing-xl);
 	}
 
 	.button {
-		padding: var(--spacing-md) var(--spacing-xl);
-		font: var(--text-sm-semibold);
 		width: 100%;
 		max-width: 300px;
 	}
@@ -211,13 +219,16 @@
 
 @media (max-width: 480px) {
 	.section {
-		padding: var(--spacing-6xl) 0;
+		padding: var(--spacing-6xl) var(--spacing-lg);
+	}
+
+	.container {
+		gap: var(--spacing-5xl);
 	}
 
 	.toggleContainer {
 		width: 100%;
 		max-width: 300px;
-		justify-content: space-between;
 	}
 
 	.toggleButton {
@@ -226,10 +237,10 @@
 	}
 
 	.title {
-		font: var(--display-xs-semibold);
+		font: var(--display-sm-semibold);
 	}
 
 	.description {
-		padding: 0 var(--spacing-lg);
+		padding: 0;
 	}
 }

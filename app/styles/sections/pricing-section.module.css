@@ -1,0 +1,86 @@
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: #1d2939;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.planGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.planCard {
+	background-color: #f9fafb;
+	border-radius: 8px;
+	padding: 2rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	text-align: center;
+}
+
+.planCard:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.planName {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #1d2939;
+	margin-bottom: 0.5rem;
+}
+
+.planPrice {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #7f56d9;
+	margin-bottom: 1.5rem;
+}
+
+.featureList {
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: 1.5rem;
+}
+
+.featureItem {
+	font-size: 1rem;
+	color: #4b5563;
+	line-height: 1.5;
+	margin-bottom: 0.5rem;
+}
+
+.selectButton {
+	background-color: #7f56d9;
+	color: #ffffff;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.selectButton:hover {
+	background-color: #6941c6;
+}
+
+@media (max-width: 768px) {
+	.title {
+		font-size: 2rem;
+	}
+
+	.planGrid {
+		grid-template-columns: 1fr;
+	}
+}

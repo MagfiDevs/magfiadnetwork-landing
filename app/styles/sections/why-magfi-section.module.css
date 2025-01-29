@@ -1,0 +1,254 @@
+.container {
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+.header {
+	margin-bottom: 4rem;
+	position: relative;
+}
+.phoneWrapper {
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: 600;
+	color: var(--Gray-950, var(--colors-gray-light-mode-950, #0c111d));
+	line-height: 133%;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.titleUnderline {
+	position: absolute;
+	bottom: -1rem;
+	left: 0;
+	width: 48px;
+	height: 6px;
+	border-radius: var(--radius-full, 9999px);
+	background: var(--Colors-Brand-600, #7f56d9);
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-5xl, 40px);
+}
+.leftContent,
+.rightContent {
+	display: flex;
+	padding: var(--spacing-7xl, 64px) 0px;
+	flex-direction: column;
+	gap: var(--spacing-7xl, 64px);
+	flex: 1 0 0;
+}
+
+.leftFeatures,
+.rightFeatures {
+	display: flex;
+	padding: var(--spacing-7xl, 64px) 0px;
+	flex-direction: column;
+	gap: var(--spacing-8xl, 64px);
+	flex: 1;
+	align-self: stretch;
+	position: relative;
+}
+
+.leftFeatures {
+	align-items: flex-end;
+}
+
+.rightFeatures {
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+
+.featureGroup {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-xl, 16px);
+	border-radius: var(--radius-2xl, 16px);
+	transition: all 0.5s ease;
+	position: relative;
+	z-index: 1;
+}
+
+.featureContent {
+	display: flex;
+	padding: var(--spacing-2xl, 20px);
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--spacing-lg, 12px);
+	border-radius: var(--radius-2xl, 16px);
+	background: var(--colors-gray-light-mode-25, #fcfcfd);
+	transition: all 0.5s ease;
+	overflow: hidden;
+}
+
+.featureText {
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: #1d2939;
+	white-space: nowrap;
+}
+
+.featureDescription {
+	font-size: 1rem;
+	color: #667085;
+	line-height: 1.5;
+	opacity: 0;
+	max-height: 0;
+	transition: all 0.5s ease;
+}
+
+.iconWrapper {
+	display: flex;
+	padding: var(--spacing-lg, 12px);
+	align-items: center;
+	border-radius: var(--radius-full, 9999px);
+	background: var(--colors-gray-light-mode-25, #fcfcfd);
+	transition: all 0.5s ease;
+}
+
+.icon {
+	width: 24px;
+	height: 24px;
+	color: #7f56d9;
+}
+
+/* Sol sütun hover efektleri */
+.leftFeatures .featureGroup:hover ~ .featureGroup {
+	transform: translateY(20px);
+}
+
+/* Sağ sütun hover efektleri */
+.rightFeatures .featureGroup:hover ~ .featureGroup {
+	transform: translateY(20px);
+}
+
+/* Hover effects */
+.featureGroup:hover {
+	z-index: 2;
+}
+
+.featureGroup:hover .featureContent {
+	height: 120px;
+	box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+	background: white;
+}
+
+.featureGroup:hover .featureDescription {
+	opacity: 1;
+	max-height: 100px;
+	margin-top: 8px;
+}
+
+.featureGroup:hover .iconWrapper {
+	background: #7f56d9;
+}
+
+.featureGroup:hover .icon {
+	color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+	.content {
+		grid-template-columns: 1fr 300px 1fr;
+		gap: 2rem;
+	}
+
+	.leftFeatures,
+	.rightFeatures {
+		gap: 6rem;
+	}
+
+	.leftFeatures {
+		padding-top: 3rem;
+	}
+
+	.rightFeatures {
+		padding-top: 6rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.section {
+		padding: 4rem 0;
+	}
+
+	.header {
+		margin-bottom: 3rem;
+		text-align: center;
+	}
+
+	.title {
+		font-size: 2rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.titleUnderline {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.content {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.leftFeatures,
+	.rightFeatures {
+		gap: 1rem;
+		padding-top: 0;
+	}
+
+	.featureGroup {
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.featureContent {
+		position: static;
+		width: auto;
+	}
+
+	.featureGroup:hover .featureContent {
+		height: auto;
+	}
+
+	.featureDescription {
+		opacity: 1;
+	}
+
+	.phoneWrapper {
+		height: 400px;
+		order: -1;
+	}
+}
+
+@media (max-width: 640px) {
+	.featureContent {
+		padding: 1rem 1.25rem;
+	}
+
+	.featureText {
+		font-size: 1rem;
+	}
+
+	.iconWrapper {
+		width: 40px;
+		height: 40px;
+	}
+
+	.icon {
+		width: 20px;
+		height: 20px;
+	}
+}

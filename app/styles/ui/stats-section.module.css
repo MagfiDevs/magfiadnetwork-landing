@@ -1,0 +1,149 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-self: stretch;
+	background: var(--colors-gray-light-mode-25, #fcfcfd);
+}
+
+.mainStats {
+	display: grid;
+	grid-template-columns: 1fr;
+	position: relative;
+	padding: 0 0.5rem;
+}
+
+.mainStats > div:not(:last-child) {
+	position: relative;
+}
+
+.mainStats > div:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	background: #e4e7ec;
+}
+
+.mainStats::after {
+	content: "";
+	position: absolute;
+	bottom: -1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #37bbfe;
+	border-radius: 2px;
+}
+
+.statNumber {
+	font-size: 16px;
+	font-weight: 600;
+	text-align: center;
+	color: var(--Gray-800, var(--colors-gray-light-mode-800, #182230));
+}
+
+.statLabel {
+	color: var(--Gray-500, var(--colors-gray-light-mode-500, #667085));
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 150%;
+	text-align: center;
+}
+
+.bottomCards {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--spacing-3xl);
+	align-self: stretch;
+}
+
+.iconCard {
+	display: flex;
+	padding: var(--spacing-xl) var(--spacing-2xl);
+	align-items: center;
+	gap: var(--spacing-2xl);
+	flex: 1 0 0;
+	background: var(--colors-gray-light-mode-100, #f2f4f7);
+	border-radius: var(--radius-xl, 12px);
+}
+
+.iconContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon {
+	width: 20px;
+	height: 20px;
+	color: #37bbfe;
+}
+
+.iconCardContent {
+	display: flex;
+	flex-direction: column;
+}
+
+.iconCardNumber {
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--Gray-800, var(--colors-gray-light-mode-800, #182230));
+}
+
+.iconCardLabel {
+	color: #667085;
+	font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+	.container {
+		padding: var(--spacing-2xl);
+		border-radius: 24px;
+	}
+
+	.mainStats {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		margin-bottom: 3rem;
+		padding: 0 1rem;
+	}
+
+	.mainStats > div:not(:last-child)::after {
+		left: auto;
+		right: -1rem;
+		top: 0;
+		bottom: 0;
+		width: 1px;
+		height: auto;
+	}
+
+	.mainStats::after {
+		bottom: -1.5rem;
+		width: 24px;
+		height: 4px;
+	}
+
+	.statNumber {
+		color: var(--Gray-800, var(--colors-gray-light-mode-800, #182230));
+		text-align: center;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 150%;
+	}
+
+	.statLabel {
+		font-size: 12px;
+	}
+
+	.iconContainer {
+		width: 48px;
+		height: 48px;
+		border-radius: 12px;
+	}
+
+	.icon {
+		width: 24px;
+		height: 24px;
+	}
+}

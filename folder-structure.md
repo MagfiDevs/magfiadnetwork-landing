@@ -1,0 +1,45 @@
+/app
+  /components
+    /layout
+      layout.tsx
+      site-header.tsx
+      site-footer.tsx
+    /sections
+      hero-section.tsx
+      why-telegram-section.tsx
+      why-magfi-section.tsx
+      feature-section.tsx
+      create-ads-section.tsx
+      great-results-section.tsx
+      pricing-section.tsx
+      testimonial-section.tsx
+    /ui
+      phone-mockup.tsx
+      phone-mockup-dark.tsx
+      stats-section.tsx
+      ranking-cards.tsx
+    icons.tsx
+  /styles
+    globals.css
+    /components
+      layout.module.css
+      site-header.module.css
+      site-footer.module.css
+    /sections
+      hero-section.module.css
+      why-telegram-section.module.css
+      why-magfi-section.module.css
+      feature-section.module.css
+      create-ads-section.module.css
+      great-results.module.css
+      pricing-section.module.css
+      testimonial-section.module.css
+    /ui
+      phone-mockup.module.css
+      phone-mockup-dark.module.css
+      stats-section.module.css
+      ranking-cards.module.css
+  page.tsx
+/public
+  (images and other static assets)
+

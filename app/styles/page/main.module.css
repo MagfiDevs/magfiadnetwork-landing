@@ -1,0 +1,17 @@
+.landingPage {
+	display: flex;
+	max-width: 1280px;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-11xl, 160px);
+	flex: 1 0 0;
+	margin: 0 auto;
+}
+
+.fullPage {
+	display: flex;
+	padding: var(--spacing-6xl, 48px) 10px var(--spacing-10xl, 128px) 10px;
+	justify-content: center;
+	align-items: center;
+	align-self: stretch;
+}

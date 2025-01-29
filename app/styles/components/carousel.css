@@ -1,0 +1,90 @@
+.section {
+	padding: 4rem 0;
+	overflow: hidden;
+}
+
+.container {
+	display: flex;
+	max-width: 960px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: var(--spacing-5xl, 40px);
+	align-self: stretch;
+	margin: 0 auto;
+}
+
+.titleContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	color: var(--Gray-950, var(--colors-gray-light-mode-950, #0c111d));
+	flex: 1 0 0;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 32px;
+}
+
+.title span {
+	color: #7f56d9;
+}
+
+.carouselContainer {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-3xl, 24px);
+	align-self: stretch;
+}
+
+.carouselWrapper {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	scroll-behavior: smooth;
+}
+
+.carouselWrapper::-webkit-scrollbar {
+	display: none;
+}
+
+.navigationButtons {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-3xl, 24px);
+}
+
+.scrollButton {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.2s;
+	color: #ffffff;
+}
+
+.scrollButton:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.scrollIcon {
+	width: 16px;
+	height: 16px;
+	color: #000;
+}
+
+@media (max-width: 768px) {
+	.section {
+		padding: 48px 0;
+	}
+
+	.title {
+		font-size: 28px;
+	}
+}

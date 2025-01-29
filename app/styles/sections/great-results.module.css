@@ -1,0 +1,49 @@
+.section {
+	overflow: hidden;
+}
+.container {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	gap: var(--spacing-5xl, 40px);
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-lg, 12px);
+	align-self: stretch;
+}
+.carouselWrapper {
+	overflow-x: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	scroll-behavior: smooth;
+}
+
+.title {
+	color: var(--Gray-950, var(--colors-gray-light-mode-950, #0c111d));
+
+	/* Display xs/Semibold */
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 32px; /* 133.333% */
+}
+
+.title span {
+	color: var(--Brand-600, var(--Colors-Brand-600, #7f56d9));
+
+	/* Display xs/Semibold */
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 32px;
+}
+
+.carouselContainer {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-3xl, 24px);
+	align-self: stretch;
+}

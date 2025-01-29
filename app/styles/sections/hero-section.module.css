@@ -24,26 +24,25 @@
 	padding: var(--spacing-xs);
 	gap: var(--spacing-md);
 	border-radius: var(--radius-full);
-	opacity: 0px;
 }
 
 .toggleContainer {
 	display: inline-flex;
-	background-color: white;
-	border-radius: 100px;
+	background-color: var(--gray-25);
+	border-radius: var(--radius-full);
 	position: relative;
-	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+	box-shadow: var(--shadow-md);
+	padding: var(--spacing-xs);
 }
 
 .toggleButton {
-	padding: var(--spacing-xl) var(--spacing-6xl) var(--spacing-xl) var(--spacing-6xl);
+	padding: var(--spacing-xl) var(--spacing-4xl);
 	gap: 10px;
 	border-radius: var(--radius-full);
-	opacity: 0px;
 	position: relative;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
-	transition: all 0.5s ease;
+	transition: all 0.3s ease;
 	white-space: nowrap;
 	border: none;
 	background: none;
@@ -51,13 +50,18 @@
 }
 
 .toggleButtonActive {
-	background-color: #101828;
-	color: white;
-	box-shadow: 0px 16px 60px 0px #00000014;
+	background-color: var(--gray-900);
+	color: var(--gray-25);
+	box-shadow: var(--shadow-xs);
 }
 
 .toggleButtonInactive {
-	color: #475467;
+	color: var(--gray-600);
+}
+
+.toggleButtonInactive:hover {
+	color: var(--gray-700);
+	background-color: var(--gray-100);
 }
 
 .content {
@@ -71,11 +75,9 @@
 }
 
 .title {
-	font-size: 48px;
-	font-weight: 580;
-	line-height: 1.5;
+	font: var(--display-lg-semibold);
 	letter-spacing: -0.02em;
-	color: #1d2939;
+	color: var(--gray-900);
 	margin-top: var(--spacing-lg);
 }
 
@@ -100,29 +102,27 @@
 }
 
 .description {
-	font-size: 14px;
-	line-height: 20px;
-	color: #475467;
+	font: var(--text-md-regular);
+	color: var(--gray-600);
 	max-width: 450px;
-	padding: 0 16px;
-	font-weight: 300;
+	padding: 0 var(--spacing-xl);
 	margin: 0;
 }
 
 .button {
-	padding: var(--spacing-lg) var(--spacing-2xl) var(--spacing-lg) var(--spacing-2xl);
-	gap: 0px;
+	padding: var(--spacing-lg) var(--spacing-2xl);
 	border-radius: var(--radius-full);
-	opacity: 0px;
-	background: #7f56d9;
-	border-color: transparent;
-	color: white;
-	font-weight: 600;
+	background: var(--brand-600);
+	border: none;
+	color: var(--gray-25);
+	font: var(--text-md-semibold);
+	cursor: pointer;
+	transition: all 0.3s ease;
 }
 
 .button:hover {
-	background-color: #6941c6;
-	box-shadow: 0px 16px 60px 0px #00000014;
+	background-color: var(--brand-700);
+	box-shadow: var(--shadow-xl);
 }
 
 .dynamicLine {
@@ -187,19 +187,33 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	.section {
-		padding: 4rem 0;
-	}
-
-	.toggleButton {
-		padding: 0.75rem 1.5rem;
-		font-size: 0.875rem;
+		padding: var(--spacing-8xl) 0;
 	}
 
 	.title {
-		font-size: 36px;
-		line-height: 1.2;
+		font: var(--display-md-semibold);
+	}
+
+	.telegramLogo {
+		width: 44px;
+		height: 44px;
+	}
+}
+
+@media (max-width: 768px) {
+	.section {
+		padding: var(--spacing-7xl) 0;
+	}
+
+	.toggleButton {
+		padding: var(--spacing-lg) var(--spacing-xl);
+		font: var(--text-sm-medium);
+	}
+
+	.title {
+		font: var(--display-sm-regular);
 	}
 
 	.telegramLogo {
@@ -208,13 +222,40 @@
 	}
 
 	.description {
-		font-size: 16px;
-		line-height: 24px;
-		padding: 0 16px;
+		font: var(--text-md-regular);
+		padding: 0 var(--spacing-xl);
+		max-width: 100%;
 	}
 
 	.button {
-		padding: 12px 20px;
-		font-size: 14px;
+		padding: var(--spacing-md) var(--spacing-xl);
+		font: var(--text-sm-semibold);
+		width: 100%;
+		max-width: 300px;
+	}
+}
+
+@media (max-width: 480px) {
+	.section {
+		padding: var(--spacing-6xl) 0;
+	}
+
+	.toggleContainer {
+		width: 100%;
+		max-width: 300px;
+		justify-content: space-between;
+	}
+
+	.toggleButton {
+		flex: 1;
+		padding: var(--spacing-md) var(--spacing-lg);
+	}
+
+	.title {
+		font: var(--display-xs-semibold);
+	}
+
+	.description {
+		padding: 0 var(--spacing-lg);
 	}
 }
